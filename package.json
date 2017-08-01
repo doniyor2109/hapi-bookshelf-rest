@@ -2,5 +2,8 @@
   "name": "hapi-bookshelf-rest",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "boom": "^5.2.0"
+  }
 }
