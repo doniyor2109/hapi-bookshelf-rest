@@ -1,6 +1,6 @@
 {
   "name": "hapi-bookshelf-rest",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "lib/index.js",
   "license": "MIT",
   "dependencies": {
@@ -14,5 +14,9 @@
     "url": "https://github.com/doniyor2109/hapi-bookshelf-rest/issues",
     "email": "doniyor2109@mail.ru"
   },
-  "keywords": ["hapi", "bookshelf", "rest"]
+  "keywords": [
+    "hapi",
+    "bookshelf",
+    "rest"
+  ]
 }
