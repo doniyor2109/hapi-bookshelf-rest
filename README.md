@@ -3,6 +3,26 @@ REST Full API for hapi framework based on bookshelf models
 
 # Usage
 
+## Getting Started
+
+
+### Prerequisites
+```javascript
+npm
+
+npm install hapi-bookshelf-rest
+
+or 
+
+yarn
+
+yarn add hapi-bookshelf-rest
+```
+## Options
+
+path - base path
+
+
 ## Configure your REST
 ```javascript
 const rest = require('hapi-bookshelf-rest');
