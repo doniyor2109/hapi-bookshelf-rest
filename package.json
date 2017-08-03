@@ -3,6 +3,11 @@
   "version": "1.1.0",
   "main": "lib/index.js",
   "license": "MIT",
+  "scripts": {
+    "test": "ava",
+    "migration": "knex migrate:make insert_test",
+    "kinit": "knex init"
+  },
   "dependencies": {
     "bluebird": "^3.5.0",
     "boom": "^5.2.0",
@@ -20,5 +25,14 @@
     "hapi",
     "bookshelf",
     "rest"
-  ]
+  ],
+  "devDependencies": {
+    "ava": "^0.21.0",
+    "bookshelf": "^0.10.4",
+    "hapi": "^16.5.0",
+    "knex": "^0.13.0",
+    "request": "^2.81.0",
+    "sqlite": "^2.8.0",
+    "sqlite3": "^3.1.8"
+  }
 }
