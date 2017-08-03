@@ -13,6 +13,6 @@ module.exports = {
       seeds: {
           directory: path.resolve(__dirname, './seeds')
       },
-      debug: true,
+      debug: false,
   },
 };
