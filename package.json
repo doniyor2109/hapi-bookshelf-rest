@@ -4,7 +4,9 @@
   "main": "lib/index.js",
   "license": "MIT",
   "dependencies": {
-    "boom": "^5.2.0"
+    "bluebird": "^3.5.0",
+    "boom": "^5.2.0",
+    "joi": "^10.6.0"
   },
   "repository": {
     "type": "git",
