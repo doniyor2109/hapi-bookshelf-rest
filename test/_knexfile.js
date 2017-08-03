@@ -1,5 +1,4 @@
 const path = require('path');
-// Update with your config settings.
 
 module.exports = {
   development: {
@@ -8,10 +7,10 @@ module.exports = {
           filename: './test.db',
       },
       migrations: {
-          directory: path.resolve(__dirname, './migrations')
+          directory: path.resolve(__dirname, 'migrations')
       },
       seeds: {
-          directory: path.resolve(__dirname, './seeds')
+          directory: path.resolve(__dirname, 'seeds')
       },
       debug: false,
   },
