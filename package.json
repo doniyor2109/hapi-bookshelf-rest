@@ -4,9 +4,7 @@
   "main": "lib/index.js",
   "license": "MIT",
   "scripts": {
-    "test": "ava test/index.js",
-    "migration": "knex migrate:make insert_test",
-    "kinit": "knex init"
+    "test": "ava test/index.js"
   },
   "dependencies": {
     "bluebird": "^3.5.0",
