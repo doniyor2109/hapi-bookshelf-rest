@@ -6,6 +6,9 @@ exports.up = function(knex, Promise) {
         table.string('phone').notNullable();
         table.float('height');
         table.time('birth');
+
+        table.integer('car_id');
+        table.foreign('car_id').references('car', 'id');
     });
 };
 
