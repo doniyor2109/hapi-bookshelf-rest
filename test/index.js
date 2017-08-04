@@ -37,13 +37,16 @@ test.serial.cb(`POST /car`, function (t) {
             url: `${url}/car`,
             json: true,
             body: {
-              phone: '99888777',
-              car: {
-                model: 'Jeep',
+              name: '99888777',
+              user: {
+                  name: 'Jeep',
+                  phone: '123231',
               }
             }
         },
         function (err, response, body) {
+            console.log(body);
+
             t.is(response.statusCode, 201, JSON.stringify(body));
             t.end();
         }
