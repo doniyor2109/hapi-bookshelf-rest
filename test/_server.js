@@ -17,7 +17,7 @@ module.exports = (t, bookshelfInstance) => {
 
   let register = (server, options, next) => {
       rest(server, {
-          path: '/user',
+          path: '/car',
           model: require('./_model')(bookshelfInstance),
           bookshelf: bookshelfInstance,
       }).generateRoutes();
@@ -35,11 +35,15 @@ module.exports = (t, bookshelfInstance) => {
           return server
               .start()
               .then(() => {
-                  t.pass();
+                  if (t) {
+                      t.pass();
+                  }
               });
       })
       .catch(err => {
-          t.fail();
+          if (t) {
+              t.fail();
+          }
           console.log(err);
       });
 };
