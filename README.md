@@ -6,7 +6,7 @@ REST Full API for hapi framework based on bookshelf models
 ## Getting Started
 
 
-### Prerequisites
+### Installation
 ```javascript
 npm
 
@@ -29,11 +29,12 @@ const rest = require('hapi-bookshelf-rest');
 
 rest(server, {
    path: '/user',
-   model: UserBookshelfModel
+   model: BookshelfModel,
+   bookshelf: bookshelf,
 }).generateRoutes();
 ```
 
-Your REST API is ready for user route.
+This is the basic configuration for REST API.
 
 ### Customize your rest route
 
@@ -42,7 +43,8 @@ const rest = require('hapi-bookshelf-rest');
 
 rest(server, {
    path: '/user',
-   model: UserBookshelfModel
+   model: BookshelfModel,
+   bookshelf: bookshelf,
 })
 .readAll({
      queryFilter: function(request) {
@@ -53,3 +55,15 @@ rest(server, {
 })
 .generateRoutes();
 ```
+
+
+## API
+
+* `require('hapi-bookshelf-rest')([options], [routeConfig])` -> `Rest{Object}`
+   * `[options]` - global options for every route
+      * `path` - base path for REST API.
+      * `model` - resource model
+      * `bookshelf` - bookshelf instance
+   * `[routeConfig]` - global route config for every route - same as Hapi route options
+* `Rest{Object}`
+   
