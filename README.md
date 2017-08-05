@@ -63,30 +63,42 @@ This configuration is belongs to only `GET /user` path (readAll).
 
 `rest = require('hapi-bookshelf-rest')`
 
-* `rest(server, [options], [routeConfig])` : `Rest object`
-   * `server`: `object` - hapi server instance
-   * `[options]`: `object` - global options
-   * `[routeConfig]`: `object` - global route configuration
-* `Rest Object` -  sets configuration and options for routes
+* `rest(server, [options], [routeConfig])` : `Rest`:`object`
+   * `server`:`object` - hapi server instance
+   * `[options]`:`object` - global options from [configuration](/#configuration)
+   * `[routeConfig]`:`object` - global route configuration from [configuration](/#configuration)
+* `Rest`:`object` -  sets configuration and options for routes
    * `readOne([options], [routeConfig])` - reads one resource - `GET /path/{id}` 
+      * `[options]`:`object` - local options from [configuration](/#configuration)
+      * `[routeConfig]`:`object` - local route configuration from [configuration](/#configuration)
    * `readAll([options], [routeConfig])` -  reads all resource - `GET /path` 
+      * `[options]`:`object` - local options from [configuration](/#configuration)
+      * `[routeConfig]`: `object` - local route configuration from [configuration](/#configuration)
    * `create([options], [routeConfig])` - creates new resource - `POST /path` 
+      * `[options]`:`object` - local options from [configuration](/#configuration)
+      * `[routeConfig]`:`object` - local route configuration from [configuration](/#configuration)
    * `batch([options], [routeConfig])` -  creates multuple resources - `POST /path/batch` 
+      * `[options]`:`object` - local options from [configuration](/#configuration)
+      * `[routeConfig]`:`object` - local route configuration from [configuration](/#configuration)
    * `update([options], [routeConfig])` - updates resource - `PUT /path/{id}` 
+      * `[options]`:`object` - local options from [configuration](/#configuration)
+      * `[routeConfig]`: `object` - local route configuration from [configuration](/#configuration)
    * `delete([options], [routeConfig])` - deletes resource - `DELETE /path/{id}` 
+      * `[options]`:`object` - local options from [configuration](/#configuration)
+      * `[routeConfig]`:`object` - local route configuration from [configuration](/#configuration)
    * `generateRoutes()` - generates routes
 
-### Options
+### Configuration
 
-* `[options]`: `object` - global options for every route
-   * `path`: `string` - base path for REST API.
-   * `model`: `bookshelfModel object` - resource model
-   * `bookshelf`: `BookshelfInstance object` - bookshelf instance
-   * `[queryFilter]`: `function` - modify query
-   * `[payloadFilter]`: `function` - modify payload
-   * `[deny]`: `function` - if returns true then user is not allowed to this route
-* `[routeConfig]`: `object` - global route config for every route - same as Hapi route options
-   * `handler`: `function` - route handler function
+* `[options]`:`object` - global options for every route
+   * `path`:`string` - base path for REST API.
+   * `model`:`bookshelfModel object` - resource model
+   * `bookshelf`:`BookshelfInstance object` - bookshelf instance
+   * `[queryFilter]`:`function` - modify query
+   * `[payloadFilter]`:`function` - modify payload
+   * `[deny]`:`function` - if returns true then user is not allowed to this route
+* `[routeConfig]`:`object` - global route config for every route - same as Hapi route options
+   * `handler`:`function` - route handler function
    * ... .etc
 
    
