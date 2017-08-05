@@ -6,17 +6,23 @@ REST Full API for hapi framework based on bookshelf models
 
 
 ### Installation
+
+#### npm
 ```javascript
-npm
-
 npm install hapi-bookshelf-rest
+```
 
-
-yarn
-
+#### yarn
+```
 yarn add hapi-bookshelf-rest
 ```
 
+#### git
+```
+git clone https://github.com/doniyor2109/hapi-bookshelf-rest
+```
+## Introduction
+This plugin provides easy way to develop REST API server with few configuration. There is already built in standarts that you can use. If there is standarts that plugin does not have please [issue](https://github.com/doniyor2109/hapi-bookshelf-rest/issues) this standart.
 
 ## Configure your REST
 ```javascript
@@ -57,8 +63,11 @@ This configuration is belongs to only `GET /user` path (readAll).
 
 `rest = require('hapi-bookshelf-rest')`
 
-* `rest([options], [routeConfig])` -> `Rest Object` - 
-* `Rest{Object}` -  sets configuration and options for routes
+* `rest(server, [options], [routeConfig])` : `Rest object`
+   * `server`: `object` - hapi server instance
+   * `[options]`: `object` - global options
+   * `[routeConfig]`: `object` - global route configuration
+* `Rest Object` -  sets configuration and options for routes
    * `readOne([options], [routeConfig])` - reads one resource - `GET /path/{id}` 
    * `readAll([options], [routeConfig])` -  reads all resource - `GET /path` 
    * `create([options], [routeConfig])` - creates new resource - `POST /path` 
@@ -69,12 +78,15 @@ This configuration is belongs to only `GET /user` path (readAll).
 
 ### Options
 
-* `[options]` - global options for every route
-   * `path`:string - base path for REST API.
-   * `model` - resource model
-   * `bookshelf`:BookshelfInstance Object - bookshelf instance
-   * `queryFilter`:function - modify query
-   * `payloadFilter`:function - modify payload
-   * `deny`: function - if returns true then user is not allowed to this route
-* `[routeConfig]` - global route config for every route - same as Hapi route options
+* `[options]`: `object` - global options for every route
+   * `path`: `string` - base path for REST API.
+   * `model`: `bookshelfModel object` - resource model
+   * `bookshelf`: `BookshelfInstance object` - bookshelf instance
+   * `[queryFilter]`: `function` - modify query
+   * `[payloadFilter]`: `function` - modify payload
+   * `[deny]`: `function` - if returns true then user is not allowed to this route
+* `[routeConfig]`: `object` - global route config for every route - same as Hapi route options
+   * `handler`: `function` - route handler function
+   * ... .etc
+
    
