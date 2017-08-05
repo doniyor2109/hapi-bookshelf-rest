@@ -86,7 +86,7 @@ This configuration is belongs to only `GET /user` path (readAll).
    * `delete([options], [routeConfig])` - deletes resource - `DELETE /path/{id}` 
       * `[options]`:`object` - local options from [configuration](/#configuration)
       * `[routeConfig]`:`object` - local route configuration from [configuration](/#configuration)
-   * `generateRoutes()` - generates routes
+   * `generateRoutes()`:`void` - generates routes
 
 ### Configuration
 
