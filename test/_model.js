@@ -26,5 +26,8 @@ module.exports = (bookshelfInstance) => {
 		}
 	});
 
-	return Car;
+	return {
+		Car,
+		User,
+	};
 };

@@ -16,9 +16,17 @@ module.exports = (t, bookshelfInstance) => {
 	});
 
 	let register = (server, options, next) => {
+		let models = require('./_model')(bookshelfInstance);
+
 		rest(server, {
 			path: '/car',
-			model: require('./_model')(bookshelfInstance),
+			model: models.Car,
+			bookshelf: bookshelfInstance,
+		}).generateRoutes();
+
+		rest(server, {
+			path: '/user',
+			model: models.User,
 			bookshelf: bookshelfInstance,
 		}).generateRoutes();
 
