@@ -1,6 +1,6 @@
 {
   "name": "hapi-bookshelf-rest",
-  "version": "1.11.0-alpha.7",
+  "version": "1.11.0-alpha.8",
   "main": "lib/index.js",
   "license": "MIT",
   "scripts": {
