@@ -28,6 +28,11 @@ module.exports = (t, bookshelfInstance) => {
 			path: '/user',
 			model: models.User,
 			bookshelf: bookshelfInstance,
+			filterQuery(){
+				return Promise.resolve({
+					id: 1,
+				});
+			}
 		}).generateRoutes();
 
 		next();
