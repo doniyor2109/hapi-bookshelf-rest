@@ -100,5 +100,17 @@ This configuration is belongs to only `GET /user` path (readAll).
 * `[routeConfig]`:`object` - global route config for every route - same as Hapi route options
    * `handler`:`function` - route handler function
    * ... .etc
+   
+   ## Notice
+   Your bookshelf model should have schema field that provides model attributes with `Joi` validation else query cannot pass validation.
+   `.e.g`
+   ```javascript
+   const model = bookshelf.Model.extend({
+      schema: {
+         name: joi.string(),
+         age: joi.number(),
+      }
+   })
+   ```
 
    
