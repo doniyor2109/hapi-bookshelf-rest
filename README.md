@@ -2,6 +2,8 @@
 REST Full API for hapi framework based on bookshelf models
 
 
+[![Discord](https://img.shields.io/discord/460412484566646799.svg)](https://discord.gg/GymYnZp)
+
 ## Getting Started
 
 
